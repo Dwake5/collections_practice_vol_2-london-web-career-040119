@@ -52,6 +52,13 @@ def find_cool(data)
   end
 end
 
-def organize_schools(data)
-  puts data
+#wants you to return a hash- :location -> all schools in that location
+def organize_schools(schools)
+  organized_schools = {}
+  schools.each do |name, hash|
+  location = hash[:location]
+  organized_schools[location] ||= []
+  organized_schools[location] << name
+end
+organized_schools
 end
