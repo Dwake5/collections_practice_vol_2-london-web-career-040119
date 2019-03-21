@@ -56,6 +56,7 @@ end
 def organize_schools(schools)
   organized_schools = {}
   schools.each do |name, location|
+  #this lists all the geographical locations
   location = hash[:location]
   # double pipes makes it add multiple elements, without each location would have just one
   organized_schools[location] ||= []
